@@ -3,22 +3,32 @@
 // Replace with your Code
 #navigation
   width: 100%
-  padding: 20px 0
+  min-height: 100%
   background: $black
 
   .container
     .row
       .menu-item-col
-        display: flex
-        flex-direction: column
         justify-content: center
         align-items: center
+        min-height: 100vh
+        margin: auto
+        width: 100%
+
 
         .menu
-          margin: 100px
           display: flex
           flex-direction: column
 
+
         ul
-          margin-left: 20px
-          margin-left: 300px
+          height: 100vh
+          margin: auto
+          li
+            height: 100%
+            margin: auto
+            margin-left: 25px
+
+            a
+              font-size: 50px
+              font-weight: lighter

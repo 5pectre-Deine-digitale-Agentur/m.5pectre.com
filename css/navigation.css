@@ -6,13 +6,13 @@ Error: Undefined variable: "$black".
 3: // Replace with your Code
 4: #navigation
 5:   width: 100%
-6:   padding: 20px 0
+6:   min-height: 100%
 7:   background: $black
 8: 
 9:   .container
 10:     .row
 11:       .menu-item-col
-12:         display: flex
+12:         justify-content: center
 
 Backtrace:
 /home/erik/Local Sites/5pectre/app/public/wp-content/themes/Blank-Theme/sass/navigation.sass:7
@@ -62,4 +62,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$black\".\A         on line 7 of /home/erik/Local Sites/5pectre/app/public/wp-content/themes/Blank-Theme/sass/navigation.sass\A \A 2: \A 3: // Replace with your Code\A 4: #navigation\A 5:   width: 100%\A 6:   padding: 20px 0\A 7:   background: $black\A 8: \A 9:   .container\A 10:     .row\A 11:       .menu-item-col\A 12:         display: flex"; }
+  content: "Error: Undefined variable: \"$black\".\A         on line 7 of /home/erik/Local Sites/5pectre/app/public/wp-content/themes/Blank-Theme/sass/navigation.sass\A \A 2: \A 3: // Replace with your Code\A 4: #navigation\A 5:   width: 100%\A 6:   min-height: 100%\A 7:   background: $black\A 8: \A 9:   .container\A 10:     .row\A 11:       .menu-item-col\A 12:         justify-content: center"; }
