@@ -15,6 +15,8 @@ get_header(); ?>
 
 <?php
 include 'sections/section.php';
+include 'sections/head.php';
+include 'sections/design.php';
 ?>
 
 <?php get_footer(); ?>
