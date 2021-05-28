@@ -1,0 +1,171 @@
+//_navigation.sass
+nav
+  position: fixed
+  width: 100%
+  height: 75px
+  top: 0
+  left: 0
+  z-index: 100
+  background: $white
+
+  .wrapper
+    width: calc(100% - 20px)
+    margin: auto
+    height: 100%
+    position: relative
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+
+    .menu-link
+      position: relative
+      height: 75px
+      width: 65px
+
+    .logo
+      height: 75px
+      width: 40px
+      position: relative
+
+      img
+        height: 40px
+        width: 40px
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+
+.nav
+  position: fixed
+  width: 100%
+  height: 100%
+  max-height: 100vh
+  top: -100vh
+  left: 0
+  background: $white
+  z-index: 45
+  transition: .5s
+  opacity: 0
+
+  &.toggled
+    top: 0
+    transition: .5s
+    opacity: 1
+
+  .grid
+    position: sticky
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 2fr 1fr
+
+    .left-nav
+      display: flex
+      flex-direction: column
+      justify-content: center
+      border-right: .5px solid rgba(0,0,0,.2)
+      max-width: 100vw
+      height: 100%
+
+      .wrapper
+        height: fit-content
+
+        .menu
+          height: fit-content
+          display: flex
+          flex-direction: column
+          justify-content: space-between
+
+          .menu-item
+            margin-bottom: 25px
+            width: 100%
+
+            a
+              font-weight: 300
+              font-size: 35px
+              opacity: 1
+              transition: .5s
+              position: relative
+              width: fit-content
+              width: 100%
+              height: 100%
+
+  .right-nav
+    max-width: 100vw
+
+    .wrapper
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+
+      .imprint
+        display: flex
+        flex-direction: column
+
+        .imprint-menu ul
+          display: flex
+          flex-direction: column
+
+      .imprint-nav
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+
+        ul
+          display: flex
+          flex-direction: column
+          margin-bottom: 50px
+
+.ham
+  z-index: 500
+  -webkit-tap-highlight-color: transparent
+  transition: transform 400ms
+  -moz-user-select: none
+  -webkit-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+.hamRotate.active
+  transform: rotate(45deg)
+
+.hamRotate180.active
+  transform: rotate(180deg)
+
+.ham.active
+  .top
+    stroke-dasharray: 10 160
+
+.line
+  fill: none
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms
+  stroke: $black
+  stroke-width: 2
+  stroke-linecap: round
+
+.ham
+  .top
+    stroke-dasharray: 20 160
+
+  .middle
+    stroke-dasharray: 40 142
+    transform-origin: 50%
+    transition: transform 400ms
+
+  .bottom
+    stroke-dasharray: 20 85
+    transform-origin: 50%
+    transition: transform 400ms, stroke-dashoffset 400ms
+
+  &.active
+    .top
+      stroke-dashoffset: -64px
+
+    .middle
+      //stroke-dashoffset: -20px;
+      transform: rotate(90deg)
+
+    .bottom
+      stroke-dashoffset: -64px
